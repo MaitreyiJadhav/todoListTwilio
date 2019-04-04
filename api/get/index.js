@@ -4,7 +4,6 @@ const pool = require('../../db/db')
 const log = require('koa-pino-logger')
 const cors = require('@koa/cors');
 
-
 const app = new Koa()
 
 app.use(bodyParser())
@@ -23,7 +22,6 @@ async function show() {
     const itemData = await pool.query(` SELECT * FROM todoList `)
   
     return itemData
-
 
   } catch (error) {
     console.log(error)
