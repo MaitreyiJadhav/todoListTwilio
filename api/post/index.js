@@ -20,17 +20,21 @@ ctx.type = 'text/xml';
 console.log(ctx.request.body)
 const todoItem = await ctx.request.body.Body
 await createItem(todoItem);
-ctx.body = response(todoItem);
+ctx.body = response(todoItem + ' has been added in todo list');
 ctx.log.info('Your new item is in the todo list')
 })
 
 async function createItem(todoItem) {
-try {
-const itemData = await pool.query(`INSERT INTO todoList (todoItem) VALUES ('${todoItem}');`)
-return itemData
-} catch (error) {
-console.log(error)
+try 
+{
+  const itemData = await pool.query(`INSERT INTO todoList (todoItem) VALUES ('${todoItem}');`)
+  return itemData
+} 
+  catch (error)
+ {
+  console.log(error)
 }
+
 }
 
 module.exports = app.callback()

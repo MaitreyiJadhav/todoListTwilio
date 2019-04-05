@@ -4,10 +4,10 @@
 
     "name": "todo",
     "env": {
-      "DBHOST": "maitreyidb.c2iipqd2e792.us-east-2.rds.amazonaws.com",
-      "DBPORT": "3306",
-      "DBUSER": "maitreyidb",
-      "DBPASSWORD": "maitreyidb",
+      "DBHOST": "",
+      "DBPORT": "",
+      "DBUSER": "",
+      "DBPASSWORD": "",
       "DBNAME": "todo"
     },
     "builds": [
